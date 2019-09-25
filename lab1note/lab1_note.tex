@@ -1,0 +1,283 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX spellcheck = en-US
+
+\documentclass[10pt,a4paper,titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{minted}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\urlstyle{same}
+\author{Yapi D}
+\title{Lab 1}
+
+
+\begin{document}
+	\makeatletter
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{pylogo}\\[4ex]
+		{\huge \bfseries  \@title }\\[2ex] 
+		{\LARGE  \@author}\\[50ex] 
+		{\large \@date}
+	\end{center}
+\end{titlepage}
+\makeatother
+\thispagestyle{empty}
+\newpage
+
+\section{Objective}
+In this first lab you will install all tools needed to program in python and learn
+about python \textcolor{blue}{function}, \textcolor{blue}{function arguments}, \textcolor{blue}{variable} and learn about two pythons packages:
+\textcolor{blue}{Matplotlib} for plotting and \textcolor{blue}{Pandas} for reading csv/excel files. I will explain the concept of python package as well.
+	\section{Installing all requirements}
+	The first step is to install all the requirements we need to program in Python. You start by installing \textcolor{blue}{Python}, the text editor \textcolor{blue}{Atom}. Then you create a \textcolor{blue}{Github account}. Github is a cloud server that allows you to save your code safely in a cloud environment. This is how modern software development is done. It allows you to cooperate with other software developers, by safely saving and sharing your code.
+	
+	\justify
+	Follow these instructions:
+	\justify
+	\begin{enumerate}
+		\item \href{https://www.python.org/downloads/release/python-374/}{Click here to install Python}: Downloads > Download Python 3.7.4. Make sure to select \textcolor{blue}{Add Python path}, and follow the instructions.
+		\item Install the text editor atom \href{https://atom.io/}{ from here}
+		\item Get a github account \href{https://github.com/}{from here}
+		\item Now go into your github account and create a repository called yourname$\_$python$\_$course
+		\item Install git on window \href{https://git-scm.com/downloads}{from here}
+		\item Invite me as a collaborator by clicking : Settings > Collaborators,  then add my github username \textcolor{blue}{yellowsimulator} in the box and click \textcolor{blue}{Add collaborator}
+	\end{enumerate}
+\subsection{Important linux and Window Powershell commands}
+\begin{lstlisting}[language=bash]
+#create a folder called myfolder
+$ mkdir myfolder
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#create a a file called myfile.py
+$ New-Item myfile.py
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#delate the file called myfile.py
+$ rm myfile.py
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=bash]
+#go inside the folder called myfolder
+$ cd myfolder
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#see what is inside the folder called myfolder
+$ ls myfolder
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#go back
+$ cd .. 
+\end{lstlisting}
+
+\subsection{Importants git commands (git status, git add, git commit, git push)}
+\begin{lstlisting}[language=bash]
+#create a local copy of a folder call somerepository
+$ git clone somerepository
+\end{lstlisting}
+\justify
+To save your code on git
+\begin{lstlisting}[language=bash]
+#check all files that chaged
+$ git status
+
+#add file called filename
+$ git add filename
+
+#confirm that you added the file 
+$ git commit -m "add your message here"
+
+#now save your file on the cloud
+$ git push 
+\end{lstlisting}
+
+
+\section{Installing more python stuff}
+Now we will create a \textcolor{blue}{virtual environment}. A virtual environment allows you to manages all your python code nicely. You will learn why it is important.
+\begin{lstlisting}[language=python]
+#create a virtual environment called km_python_env
+$ python -m venv km_python_env
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#activate the virtual environement
+$ km_python_env\Scripts\activate
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash]
+#install numpy, matplotlib, pandas
+$ pip install numpy
+$ pip install matplotlib
+$ pip install pandas
+\end{lstlisting}
+
+
+\subsection{Exercise}
+\begin{enumerate}
+	\item create a local copy of the github repository you created before on you computer (use git clone)
+	\item go inside that repository and create a folder called lab1 (use cd and mkdir)
+	\item now create the file python$\_$lab1.py inside the folder lab1 (use New-Item)
+\end{enumerate}
+
+\section{Function, variable, arguments and reading files}
+\subsection{Function, variable and arguments}
+\begin{lstlisting}[language=python]
+#create a function in python 
+def my_function():
+	"""
+	This is my cool function
+	"""
+	print("I am awesome")
+\end{lstlisting}
+
+\justify
+Functions allows you to group your code that executes one task at the time. A variable holds a value of something.
+The message at the beginning of the function between """   """ is called \textcolor{blue}{doctrings}. Why do we need it?
+\clearpage
+\begin{lstlisting}[language=python]
+#create a function with a variable holding a string 
+def print_message():
+	"""
+	This is my cool function
+	with a variable
+	"""
+	my_variable = "I am awesome"
+	print(my_variable)
+\end{lstlisting}
+\justify
+
+\begin{lstlisting}[language=python]
+#create a function with one argument 
+def print_message(my_variable):
+	"""
+	This is my cool function
+	with one argument
+	"""
+	print(my_variable)
+
+#Initialize variable and call the function
+my_variable = "I am awesome"
+print_message(my_variable)
+\end{lstlisting}
+\justify
+\begin{lstlisting}[language=python]
+#create a function with two arguments
+def print_message(name, job):
+	"""
+	This is my cool function
+	with two arguments.
+	"""
+	message = "My name is {}, I am a {}".format(name,job)
+	print(message)
+
+#Initialize variables and call the function
+name = "Yapi Thor "
+job = " Musician"
+print_message(name, job)
+\end{lstlisting}
+
+\begin{lstlisting}[language=python]
+#create a function with many arguments
+def print_arguments(**args):
+"""
+This function takes as many arguments
+as you want 
+"""
+print(args)
+
+#Initialize variables and call the function
+name1 = "bla"
+name2 = "blabla"
+print_arguments(name1, name2)
+\end{lstlisting}
+
+
+\subsection{Importing python packages and reading a csv/exl file}
+Here you are introduced to the python package called \textcolor{blue}{pandas} for reading data from a csv file or excel file and \textcolor{blue}{matplotlib} for plotting the data. To read data from a csv or excel file use the function \textcolor{blue}{read$\_$csv()} and \textcolor{blue}{read$\_$excel()}
+\begin{lstlisting}[language=python]
+#A function that plots a freqeuncy spectrum
+import pandas as pd
+import matplotlib as plt
+
+
+def plot_frequency_spectrum():
+	"""
+	plot a frequency spectrum
+	"""
+	path = "data.csv"
+	df = pd.read_csv(path)
+	frequency = df["frequency"].values
+	amplitude = df["amplitude"].values
+	plt.plot(frequency, amplitude)
+	plt.xlabel("Frequency")
+	plt.ylabel("Amplitude")
+	plt.title("Frequency spectrum")
+	plt.show()
+	
+# plot_frequency_spectrum()
+\end{lstlisting}
+
+\subsubsection{Exercise}
+This exercise will introduce the \textcolor{blue}{if, else} statement
+\begin{enumerate}
+	\item Update the above function to take the \textcolor{blue}{path}, \textcolor{blue}{x label}, \textcolor{blue}{y label} and \textcolor{blue}{title} as arguments.
+	\item Now write a function that can plot data either from a csv (\textcolor{blue}{data.csv}) file or an excel file \textcolor{blue}{data.xls}.
+	\begin{lstlisting}[language=python]
+	#some hint
+	def my_function(path, ...):
+		"""
+		This is my cool function
+		"""
+		if  path == "data.csv":
+			df = pd.read_csv(path)
+		else:
+			df = pd.read_excel(path)
+		
+	\end{lstlisting}
+\end{enumerate}
+
+\end{document}
