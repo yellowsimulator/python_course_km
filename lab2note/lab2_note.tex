@@ -72,7 +72,7 @@
 \section{Function and string}
 In this lab you will learn about functions that take arguments and return something. \textcolor{blue}{I encourage you to bring an extra bigger screen. It will make programming easier for you in this lab}.
 \justify
-You will learn how to import your function in an other python file. You will write two functions: the first function will take a table as argument and return two parameters (frequency and amplitude).
+You will learn how to import your function in an other python file. You will write two functions: the first function will take a table as argument and return two parameters (frequency and amplitude data).
 \justify
  The second function will return two strings representing the x label and the y label for a plot. Then you will import both functions into a dashboard program. We will be using the python dashboard library called dash. So we need to install it.
 The user will upload a file into the dashboard and the dashboard should show the plot as bellow 
@@ -123,7 +123,7 @@ $ pip install dash_core_components
 $ pip install dash_html_components
 
 \end{lstlisting}
-\subsection{Function returning something}
+\subsection{Function returning something, and list}
 So far we have seen functions that print something. Now we will write functions that return something
 \begin{lstlisting}[language=python]
 # a funtion that returns a string
@@ -149,13 +149,60 @@ print(name, job)
 message = "{} is an {}".format(name, job)
 print(message)
 \end{lstlisting}
+Today we will learn about  python list. A list is a collection of items in a square bracket:
+\begin{lstlisting}[language=python]
+# alist of number
+my_list = [1,2,3,4,4]
+# a list of strings
+my_strings_list = ["bla", "blabla", "cool", "yes"]
+\end{lstlisting}
+the place of each item in a list is called \textcolor{blue}{index}. for example "bla" is at index 0, "blabla" is at index 1, "cool" is at index 2 and "yes" is at index 3. You can access an item of a list by specifying its index like this :
+\begin{lstlisting}[language=python]
+my_strings_list[0], my_strings_list[1]
+\end{lstlisting}
+One import function to split list in python is the function called split()
+\begin{lstlisting}[language=python]
+def split_list(string):
+	"""
+	This function take a a string 
+	as argument, split it and return 
+	a list of substrings.
+	"""
+	strings_list = string.split()
+	return strings_list
 
+# call the function and print:
+string = "What is happening here guys"
+string_list = split_list(string)
+print(string_list)
+print(string_list[0])
+print(string_list[1])
+print(string_list[-1])
+\end{lstlisting}
 
+\begin{lstlisting}[language=python]
+def split_list2(string):
+"""
+This function take a a string 
+as argument, split it and return 
+a list of substrings.
+"""
+strings_list = string.split("/")
+return strings_list
+
+# call the function and print:
+string = "What/is/happening/here/guys"
+string_list = split_list(string)
+print(string_list)
+print(string_list[0])
+print(string_list[1])
+print(string_list[-1])
+\end{lstlisting}
 \subsection{Exercise}
 Write a function that return the strings "Amplitude in G" and "Frequency in Hz"
 \subsection{Exercise}
 write a function that takes a table as argument and return frequency and amplitude data.
-use the unction you wrote in lab1.
+use the functions you wrote in lab1.
 
 \section{Import function in an other python file}
 \begin{enumerate}

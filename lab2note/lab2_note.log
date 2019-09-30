@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.7.28)  30 SEP 2019 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.7.28)  30 SEP 2019 14:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -697,31 +697,32 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
                    \relax 
 l.104 #
         if you get an error copy past this scrit [1 <./dashboard.PNG>] [2]
-LaTeX Font Info:    Try loading font information for U+msa on input line 162.
+LaTeX Font Info:    Try loading font information for U+msa on input line 209.
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 162.
+LaTeX Font Info:    Try loading font information for U+msb on input line 209.
 
 (c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
- (./lab2_note.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
+
+(./lab2_note.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
 Package rerunfilecheck Info: File `lab2_note.out' has not changed.
-(rerunfilecheck)             Checksum: D24DEA047152E06E2762AEDA95235DBE;504.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
+(rerunfilecheck)             Checksum: 2B0591456B4C0E00A9513C1DC45EF4CD;514.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
  ) 
 Here is how much of TeX's memory you used:
- 11958 strings out of 492609
- 185110 string characters out of 6132818
- 592464 words of memory out of 5000000
- 15643 multiletter control sequences out of 15000+600000
+ 12008 strings out of 492609
+ 185822 string characters out of 6132818
+ 606468 words of memory out of 5000000
+ 15651 multiletter control sequences out of 15000+600000
  14427 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,7n,42p,952b,1908s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -733,10 +734,10 @@ fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2019/texmf-dist/fonts/type
 m-super/sfrm1000.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sf
 rm1200.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb
 ><c:/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on lab2_note.pdf (4 pages, 567742 bytes).
+Output written on lab2_note.pdf (5 pages, 574293 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 120 named destinations out of 1000 (max. 500000)
  67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
